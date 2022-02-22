@@ -1,17 +1,17 @@
 package com.company;
 
 public class Main {
-     public static boolean shouldWakeUp(boolean barking,int hourOfDay){
-         if(hourOfDay<0 || hourOfDay>23)
-          return false;
-         if(barking){
-             if(hourOfDay<8 || hourOfDay>22)
-             return true;
-         }return false;
 
-
-     }
     public static void main(String[] args) {
-     shouldWakeUp(true,5);
+      ITelephone gauravPhone;
+      gauravPhone=new DeskPhone(987654321);
+      gauravPhone.powerOn();
+      gauravPhone.callPhone(987654321);
+      gauravPhone.answer();
+
+      gauravPhone=new MobilePhone(23456);
+      gauravPhone.callPhone(24365);
+      gauravPhone.answer();
+      gauravPhone.powerOn();
     }
 }
